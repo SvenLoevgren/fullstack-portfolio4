@@ -7,13 +7,13 @@ assignees: ''
 
 ---
 
-#UserStory no<x>:
+# userStory no <x>:
 
-As a **<USER>** I want to **<Feature> So That<Outcome>
+As a **<USER>** I want to **<Feature>**  So That *<Outcome>*
 
 ________________________________________________________________________
 
-##Acceptance Criteria:
+## Acceptance Criteria:
 
 1. Expected outcome tested.
 2. Agreement to Close Issue.
