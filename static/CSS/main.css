@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
+
+/* ----------------------------------------Navbar */
+
 .navbar-brand-img {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -10,27 +13,12 @@
 .navbar-brand img:hover {
   zoom: 1;
 }
+
+.container-fluid {
+  background: rgb(138, 127, 255);
+}
+
 /* ----------------------------------------Footer */
-
-.test {
-  background-color: #f13c3c;
-  color: #070707;
-}
-
-.cv-pdf i {
-  font-size: 18px;
-  color: #fafafa;
-  text-align: center;
-  padding-left: 5px;
-  transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-}
-
-.cv-pdf i:hover {
-  color: #e84610;
-}
 
 .social-links {
   padding-bottom: 15px;
@@ -58,12 +46,10 @@
 
 #footer-details {
   padding: 20px;
-  background-color: rgb(6, 77, 53);
+  background-color: rgb(120, 169, 153);
 }
 
-.container-fluid {
-  background: aquamarine;
-}
+/* ----------------------------------------Sections */
 
 #section2 {
   margin-top: 0;
