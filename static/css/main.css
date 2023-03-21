@@ -58,8 +58,24 @@ section {
 }
     
         /* Set the background image for the first section */
+#section1 {
+    background-image: url('{% static "img/Background_1.png" %}');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
         
 #section2 {
     background-color: rgb(127, 131, 255);
     margin-top: 0;
 }
+
+/* .z-index {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  */
+  

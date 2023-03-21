@@ -9,11 +9,84 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
   {% load static %}
   <link rel='shortcut icon' type='image/x-icon' href='{% static "images/favicon.ico" %}' />
-  <link rel="stylesheet" type="text/css" href='{% static "CSS/main.css" %}' />
+  <link rel="stylesheet" type="text/css" href='{% static "css/main.css" %}' />
   <title>Fastfood</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+
+
+/* ----------------------------------------Navbar */
+
+.navbar-brand-img {
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    transform-origin: center center;
+    zoom: 1.5;
+}
+    
+    /*.navbar-brand img:hover {
+      zoom: 1;
+    }
+    */
+.container-fluid {
+    background: rgb(184, 183, 199);
+}
+    
+/* ----------------------------------------Footer */
+    
+.social-links {
+    padding-bottom: 15px;
+}
+    
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 7px;
+    text-align: center;
+    color: #3a07f0;
+    background: #f0eded;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+    
+.social-links li a i:hover {
+    background: #e84610;
+}
+    
+#footer-details {
+    padding: 20px;
+    background-color: rgb(206, 224, 218);
+}
+    
+/* ----------------------------------------Sections */
+    
+        /* Set the height of each section to 100% of the viewport */
+section {
+    height: 100vh;
+}
+    
+        /* Set the background image for the first section */
+#section1 {
+  background-image: url('{% static "img/Background_1.png" %}');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+        
+#section2 {
+    background-color: rgb(127, 131, 255);
+    margin-top: 0;
+}
+</style>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
       <div class="navbar-brand">
         <a>
@@ -30,32 +103,47 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+              <a class="nav-link" href="#">Booking</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
   </nav>
-  <section id="section1">
-    <img src='{% static "img/Background_1.png" %}' class="img-fluid" alt="Teenager holding a Vegan burger" />
+  <section id="section1"></section>
+  <section id="section2" class="bg-light p-5 text-center">
+    <div class="container">
+      <h1 class="mb-4">ABOUT US</h1>
+      <hr>
+      <p class="mb-4" style="line-height: 1.5;">More Vegans is a Vegan fastfood chain that 
+        was founded in sweden year 2020. The purpose was, and still is, to deliver fastfood that
+         is healthy. Due to the stressful culture we live in - alot of people (young and old)
+          prefers to have a quick bite during their stressful day, filling them up with energy
+           - to cope with that... More Vegans will fullfill their needs.
+            The ingridients in our food is detailed picked to fullfill a fabolous taste,
+             minimized unhealthy fat, maximized with immune boosting ingridients and
+              NON chemicals (e-number carriers). <hr> You can <strong>book a table</strong> at our restaurant 
+              by clicking on the booking below.</p>
+      <button class="btn btn-primary">Booking!</button>
+    </div>
+  </section>  
+  <section id="section3" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <!-- Content for the left half of the section -->
+          <img src='{% static "img/MAP.png" %}' alt="Map to find our restaurant">
+        </div>
+        <div class="col-sm-6">
+          <!-- Content for the right half of the section -->
+          <form onsubmit="return sendMail(this);">
+            <input type="text" name="name" class="form-control" id="fullname" placeholder="Your name" required />
+            <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Your Email" required />
+            <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Your question" required></textarea>
+            <button type="submit" class="btn btn-secondary d-block mx-auto">Send email!</button>
+        </form>
+        </div>
+      </div>    
   </section>
-  <section id="section2"> </section>
-  <section id="section3"></section>
 
   <footer class="container-fluid">
     <div id="footer-details" class="row">
