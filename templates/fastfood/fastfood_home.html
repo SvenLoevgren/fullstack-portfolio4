@@ -13,6 +13,16 @@
   <title>Fastfood</title>
 </head>
 <body>
+  <style>
+
+  #section3 img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 66%;
+  }
+  
+  </style>
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
       <div class="navbar-brand">
@@ -54,14 +64,15 @@
       <button class="btn btn-primary">Booking!</button>
     </div>
   </section>  
-  <section id="section3" class="container-fluid">
+ <!-- <section id="section3" class="container-fluid">
+
       <div class="row">
         <div class="col-sm-6">
-          <!-- Content for the left half of the section -->
+ 
           <img src='{% static "img/MAP.png" %}' alt="Map to find our restaurant">
         </div>
         <div class="col-sm-6">
-          <!-- Content for the right half of the section -->
+ 
           <form onsubmit="return sendMail(this);">
             <input type="text" name="name" class="form-control" id="fullname" placeholder="Your name" required />
             <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Your Email" required />
@@ -70,7 +81,40 @@
         </form>
         </div>
       </div>    
+  </section> -->
+  <section id="section3" class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="d-flex justify-content-center text-center">
+          <h1>Contact us?</h1>
+        </div>
+        <div class="d-flex justify-content-center text-center">
+          <p>Please find our location below or use the contact-form to send us an email.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="{% static 'img/MAP.png' %}" alt="Map to find our restaurant" class="d-block mx-auto mb-4">
+      </div>
+      <div class="col-md-6">
+        <form onsubmit="return sendMail(this);">
+          <div class="mb-3">
+            <label for="fullname" class="form-label">Your name</label>
+            <input type="text" name="name" class="form-control" id="fullname" placeholder="Your name" required>
+          </div>
+          <div class="mb-3">
+            <label for="emailaddress" class="form-label">Your Email</label>
+            <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <label for="projectsummary" class="form-label">Your question</label>
+            <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Your question" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-secondary d-block mx-auto">Send email!</button>
+        </form>
+      </div>
+    </div>    
   </section>
+  
 
   <footer class="container-fluid">
     <div id="footer-details" class="row">
