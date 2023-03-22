@@ -20,8 +20,17 @@
     height: auto;
     object-fit: contain;
     max-height: 66%;
+    padding-top: 6%;
   }
   
+  #footer-details {
+      background-color: rgb(206, 224, 218);
+      max-height: 16%
+}
+
+.test {
+  max-height: 88%;;
+}
   </style>
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
@@ -60,8 +69,8 @@
             The ingridients in our food is detailed picked to fullfill a fabolous taste,
              minimized unhealthy fat, maximized with immune boosting ingridients and
               NON chemicals (e-number carriers). <hr> You can <strong>book a table</strong> at our restaurant 
-              by clicking on the booking below.</p>
-      <button class="btn btn-primary">Booking!</button>
+              below.</p>
+      <button class="btn btn-primary">Book here!</button>
     </div>
   </section>  
  <!-- <section id="section3" class="container-fluid">
@@ -93,24 +102,24 @@
         </div>
       </div>
       <div class="col-md-6">
-        <img src="{% static 'img/MAP.png' %}" alt="Map to find our restaurant" class="d-block mx-auto mb-4">
-      </div>
-      <div class="col-md-6">
         <form onsubmit="return sendMail(this);">
           <div class="mb-3">
-            <label for="fullname" class="form-label">Your name</label>
+            <label for="fullname" class="form-label">Email Contact Form:</label> 
             <input type="text" name="name" class="form-control" id="fullname" placeholder="Your name" required>
           </div>
           <div class="mb-3">
-            <label for="emailaddress" class="form-label">Your Email</label>
+            <!-- <label for="emailaddress" class="form-label">Your Email</label> -->
             <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Your Email" required>
           </div>
           <div class="mb-3">
-            <label for="projectsummary" class="form-label">Your question</label>
+            <!-- <label for="projectsummary" class="form-label">Your question</label> -->
             <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Your question" required></textarea>
           </div>
           <button type="submit" class="btn btn-secondary d-block mx-auto">Send email!</button>
         </form>
+      </div>
+      <div class="col-md-6">
+        <img src="{% static 'img/MAP.png' %}" alt="Map to find our restaurant" class="d-block mx-auto mb-4">
       </div>
     </div>    
   </section>
