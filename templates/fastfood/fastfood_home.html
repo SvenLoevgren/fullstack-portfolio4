@@ -11,27 +11,16 @@
   <link rel='shortcut icon' type='image/x-icon' href='{% static "images/favicon.ico" %}' />
   <link rel="stylesheet" type="text/css" href='{% static "css/main.css" %}' />
   <title>Fastfood</title>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+      (function(){
+      emailjs.init("CQE6EpU7t3bA4gtmJ");
+      })();
+  </script>
 </head>
 <body>
-  <style>
-
-  #section3 img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    max-height: 66%;
-    padding-top: 6%;
-  }
-  
-  #footer-details {
-      background-color: rgb(206, 224, 218);
-      max-height: 16%
-}
-
-.test {
-  max-height: 88%;;
-}
-  </style>
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
       <div class="navbar-brand">
@@ -104,8 +93,8 @@
       <div class="col-md-6">
         <form onsubmit="return sendMail(this);">
           <div class="mb-3">
-            <label for="fullname" class="form-label">Email Contact Form:</label> 
-            <input type="text" name="name" class="form-control" id="fullname" placeholder="Your name" required>
+            <label for="fullname" class="form-label"><strong>Email Contact Frorm:</strong></label> 
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your name" required>
           </div>
           <div class="mb-3">
             <!-- <label for="emailaddress" class="form-label">Your Email</label> -->
@@ -158,6 +147,7 @@
         </div>
     </div>
   </footer>
+  <script src="{% static 'js/sendEmail.js' %}"></script>
   </body>
   </html>
   
