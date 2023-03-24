@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 if os.path.isfile("env.py"):
     import env
@@ -26,6 +30,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
+PUBLIC_KEY = os.environ.get('PUBLIC_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
