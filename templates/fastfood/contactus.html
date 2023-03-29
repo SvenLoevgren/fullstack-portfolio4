@@ -1,26 +1,40 @@
 {% extends 'fastfood/base.html' %}
 
 {% block extra_head %}
-<!-- <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-    (function(){
-    emailjs.init("{{ PUBLIC_KEY }}");
-    })();
-</script> -->
+<!-- note for html = hide public key in production {{PUBLIC_KEY}} and 
+    adjust the env.py file (uncomment the public key code -->
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+      (function(){
+      emailjs.init("CQE6EpU7t3bA4gtmJ");
+      })();
+  </script>
 {% endblock %}
 
 {% block content %}
 <section id= section4 class="container-fluid">
     <div id="div4" class="container-fluid">
-        <h1>This is my third page</h1>
-        <h2>try again</h2>
-        <h2>try more</h2>
+        <form onsubmit="return sendMail(this);">
+            <div class="mb-3">
+              <label for="fullname" class="form-label"><strong>Email Contact Frorm:</strong></label> 
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your name" required>
+            </div>
+            <div class="mb-3">
+              <!-- <label for="emailaddress" class="form-label">Your Email</label> -->
+              <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+              <!-- <label for="projectsummary" class="form-label">Your question</label> -->
+              <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Your question" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary d-block mx-auto">Send email!</button>
+          </form>
     </div>
 </section>
 {% endblock %}
 
 {% block extra_footer %}
-    <!-- <script src="{% static 'js/sendEmail.js' %}"></script> -->
+<script src="{% static 'js/sendEmail.js' %}"></script> 
 {% endblock %}

@@ -10,12 +10,9 @@
     zoom: 1.5;
 }
     
-    /*.navbar-brand img:hover {
-      zoom: 1;
-    }
-    */
-.container-fluid {
-    background: rgb(26, 8, 219);
+
+#navbar-color {
+    background: rgb(184, 183, 199);
 }
     
 /* ----------------------------------------Footer */
@@ -78,7 +75,17 @@ section {
     max-height: 66%;
     padding-top: 6%;
   }
-  
+#section3 {
+    background: rgb(184, 183, 199);
+}
+
+#section4 {
+    margin-top: 7%;    
+}
+
+#div4 {
+    padding-top: 19%;
+}
 
 /* .z-index {
     position: fixed;
