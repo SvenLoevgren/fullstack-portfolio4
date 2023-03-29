@@ -14,9 +14,11 @@
   <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
+  <!-- hide public key in production {{PUBLIC_KEY}} and 
+    adjust the env.py file (uncomment the public key code) -->
   <script type="text/javascript">
       (function(){
-      emailjs.init("{{ PUBLIC_KEY }}");
+      emailjs.init("CQE6EpU7t3bA4gtmJ");
       })();
   </script>
 </head>
