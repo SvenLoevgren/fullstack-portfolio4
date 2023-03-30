@@ -79,10 +79,6 @@ section {
     background: rgb(184, 183, 199);
 }
 
-#section4 {
-    margin-top: 7%;    
-}
-
 #div4 {
     margin-top: 19%;
 }
@@ -95,6 +91,67 @@ margin-top: 6%;
     margin-top: 4%;
 }
 
+/* -------------------------Contactus-Form-Sections */
+
+/* signup html Form */
+
+#section4 {
+    background-image: url('../img/Background_1.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.signup-form {
+    margin: 150px 10% 0 0;
+    color: #fff;
+    background-color: rgba(60, 60, 60, 0.6);
+    max-width: 400px;
+    position: absolute;
+    left: 10%;
+    padding: 30px;
+}
+.signup-form > h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+.signup-form > label {
+    font-weight: bold;
+}
+
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 3px solid #fafafa;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.text-input:hover {
+    border-color: #f16c6b;
+}
+
+/*form submition button */ 
+
+.join-button {
+    margin-top: 20px;
+    border-radius:2px;
+    padding: 15px 32px 15px 32px;
+    text-align: center;
+    font-size: 100%;
+    background-color: #f16c6b;
+    color: #fafafa;
+    display: block;
+    font-weight: bold;
+}
+
+.join-button:hover {
+    background-color: #fafafa;
+    color: #f16c6b;
+}
 /* .z-index {
     position: fixed;
     top: 0;
