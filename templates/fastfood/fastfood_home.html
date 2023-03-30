@@ -73,26 +73,36 @@
           <h1>Contact us?</h1>
         </div>
         <div class="d-flex justify-content-center text-center">
-          <p>Please find our location below or use the contact-form to send us an email.</p>
+          <p>Please find our location below or use our contact page to send us an email.</p>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="container-fluid col-md-6 bg">
+        <div  id="contacting-link" class="container-fluid bg-light">
+            <h2 class="text-center"><em>Get in touch:</em></h2>
+            <hr>
+            <p class="text-center" style="line-height: 1.5;"><em>If you have any Specific questions or need to get
+               in touch with our staff, <br>then use our 
+                contact-page by clicking on the link below. </em><br>
+            <button class="btn btn-primary" onclick="window.location.href='{% url 'contactus' %}'">Email-us!</button>
+        </div>
+      </div>
+<!--      <div class="col-md-6">
         <form onsubmit="return sendMail(this);">
           <div class="mb-3">
             <label for="fullname" class="form-label"><strong>Email Contact Frorm:</strong></label> 
             <input type="text" name="name" class="form-control" id="name" placeholder="Your name" required>
           </div>
           <div class="mb-3">
-            <!-- <label for="emailaddress" class="form-label">Your Email</label> -->
+
             <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Your Email" required>
           </div>
           <div class="mb-3">
-            <!-- <label for="projectsummary" class="form-label">Your question</label> -->
+
             <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Your question" required></textarea>
           </div>
           <button type="submit" class="btn btn-secondary d-block mx-auto">Send email!</button>
         </form>
-      </div>
+      </div> -->
       <div class="col-md-6">
         <img src="{% static 'img/MAP.png' %}" alt="Map to find our restaurant" class="d-block mx-auto mb-4">
       </div>

@@ -84,7 +84,15 @@ section {
 }
 
 #div4 {
-    padding-top: 19%;
+    margin-top: 19%;
+}
+
+#contacting-link {
+margin-top: 6%;
+}
+
+#contacting-link button {
+    margin-top: 4%;
 }
 
 /* .z-index {
