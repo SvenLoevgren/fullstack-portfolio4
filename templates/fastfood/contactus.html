@@ -37,13 +37,13 @@
             <div class="d-lg-flex justify-content-lg-end">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'fastfood_home' %}">Home</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'fastfood_home' %}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'booking' %}">Booking</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contactus' %}">Contact</a>
+                        <a class="nav-link active" href="{% url 'contactus' %}">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -51,22 +51,29 @@
       </div>
 </nav>
 <section id="section4" class="container-fluid">
-    <div id="div4" class="container-fluid">
-      <form onsubmit="return sendMail(this);">
-        <div class="mb-3">
-          <label for="fullname" class="form-label"><strong>Email Contact Frorm:</strong></label> 
-          <input type="text" name="name" class="form-control" id="name" placeholder="Your name" required>
+    <div id="div4" class="col-md-12">
+        <div class="d-flex justify-content-center text-center">
+            <p>You can either call us on <strong>+461234567890</strong>,
+                 or fill out the form below to send us your question...<br>
+                But <strong>please notice</strong> that if you need to <br><em>"book a table",</em><br>
+                 then you need to click on our <br><em>booking link above!</em></p>
         </div>
-        <div class="mb-3">
-          <!-- <label for="emailaddress" class="form-label">Your Email</label> -->
-          <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Your Email" required>
-        </div>
-        <div class="mb-3">
-          <!-- <label for="projectsummary" class="form-label">Your question</label> -->
-          <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Your question" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-secondary d-block mx-auto">Send email!</button>
-      </form>
+    </div>
+    <div class="container-fluid">
+        <form onsubmit="return sendMail(this);">
+            <div class="mb-3"> 
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your name" required>
+            </div>
+            <div class="mb-3">
+            <!-- <label for="emailaddress" class="form-label">Your Email</label> -->
+                <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+            <!-- <label for="projectsummary" class="form-label">Your question</label> -->
+                <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Your question" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary d-block mx-auto">Send email!</button>
+        </form>
     </div>
 </section>
 <footer class="container-fluid">
