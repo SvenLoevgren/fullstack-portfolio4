@@ -110,6 +110,11 @@ section {
 .field-text {
     font-weight: bold;
 }
+
+#booking-link {
+    text-decoration: none;
+    color: black;    
+}
 /* -----------------------------------------Buttons */
 #join-button {
     background-color: #f16c6b;
