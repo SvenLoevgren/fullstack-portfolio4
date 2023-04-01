@@ -49,13 +49,13 @@
 }
     
 /* ----------------------------------------Sections */
-    
-        /* Set the height of each section to 100% of the viewport */
+
+/* Set the height of each section to 100% of the viewport */
 section {
     height: 100vh;
 }
     
-        /* Set the background image for the first section */
+/* Set the background image for the first section */
 #section1 {
     background-image: url('../img/Background_1.png');
     background-repeat: no-repeat;
@@ -75,6 +75,7 @@ section {
     max-height: 66%;
     padding-top: 6%;
   }
+
 #section3 {
     background: rgb(184, 183, 199);
 }
@@ -96,7 +97,7 @@ section {
     background-size: 100% 100%;
 }
 
-/* -------------------------Contactus-Form-Sections */
+/* ------------Aboutus-page-Contactus-Form-Sections */
 
 #text-input-field {
     border: 3px solid #2e0363;
@@ -115,6 +116,10 @@ section {
     text-decoration: none;
     color: black;    
 }
+
+#booking-link:hover {
+    text-decoration: underline;   
+}
 /* -----------------------------------------Buttons */
 #join-button {
     background-color: #f16c6b;
@@ -126,7 +131,18 @@ section {
     background-color: #fafafa;
     color: #f16c6b;
 }
-*/
+
+/* ---------------------Landing-page-aboutus-Section */
+
+.div-borders {
+        border: 3px solid #2e0363;
+        border-radius: 8px;
+}
+    
+.div-borders:hover {
+        border-color: #ece9e9;
+}
+
 /* .z-index {
     position: fixed;
     top: 0;
