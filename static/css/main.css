@@ -94,62 +94,30 @@ section {
 #section4 {
     background-color:rgb(197, 199, 247);
     background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
 }
 
 /* -------------------------Contactus-Form-Sections */
 
-/* signup html Form */
- /*
-.signup-form {
-    margin: 150px 10% 0 0;
-    color: #fff;
-    background-color: rgba(60, 60, 60, 0.6);
-    max-width: 400px;
-    position: absolute;
-    left: 10%;
-    padding: 30px;
-}
-.signup-form > h2 {
-    color: #fafafa;
-    margin-bottom: 20px;
+#text-input-field {
+    border: 3px solid #2e0363;
+    border-radius: 8px;
 }
 
-.signup-form > label {
+#text-input-field:hover {
+    border-color: #ece9e9;
+}
+
+.field-text {
     font-weight: bold;
 }
-
-.text-input {
-    background: transparent;
-    color: #fafafa;
-    width: 100%;
-    height: 25px;
-    margin: 5px 0 20px 0;
-    border: 3px solid #fafafa;
-    border-radius: 2px;
-    font-weight: bold;
-}
-
-.text-input:hover {
-    border-color: #f16c6b;
-}
-
-
-
-.join-button {
-    margin-top: 20px;
-    border-radius:2px;
-    padding: 15px 32px 15px 32px;
-    text-align: center;
-    font-size: 100%;
+/* -----------------------------------------Buttons */
+#join-button {
     background-color: #f16c6b;
     color: #fafafa;
-    display: block;
     font-weight: bold;
 }
 
-.join-button:hover {
+#join-button:hover {
     background-color: #fafafa;
     color: #f16c6b;
 }

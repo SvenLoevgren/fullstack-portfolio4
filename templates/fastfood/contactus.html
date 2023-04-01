@@ -61,18 +61,18 @@
     </div>
     <div class="container-fluid">
         <form onsubmit="return sendMail(this);">
-            <div class="mb-3"> 
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your name" required>
+            <div id="text-input-field" class="mb-3"> 
+                <input type="text" name="name" class="form-control field-text" id="name" placeholder="Your Name" required>
             </div>
-            <div class="mb-3">
+            <div id="text-input-field" class="mb-3">
             <!-- <label for="emailaddress" class="form-label">Your Email</label> -->
-                <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Your Email" required>
+                <input type="email" name="emailaddress" class="form-control field-text" id="emailaddress" placeholder="Your Email" required>
             </div>
-            <div class="mb-3">
+            <div id="text-input-field" class="mb-3">
             <!-- <label for="projectsummary" class="form-label">Your question</label> -->
-                <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Your question" required></textarea>
+                <textarea rows="5" name="projectsummary" class="form-control field-text" id="projectsummary" placeholder="Your Question" required></textarea>
             </div>
-            <button type="submit" class="btn btn-secondary d-block mx-auto">Send email!</button>
+            <button type="submit" id="join-button" class="btn btn-secondary d-block mx-auto">Send email!</button>
         </form>
     </div>
 </section>
