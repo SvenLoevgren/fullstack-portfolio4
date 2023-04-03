@@ -1,28 +1,25 @@
 from django.shortcuts import render
-# from rest_framework import generics
-# from .models import Booking, Availability
-# from .serializers import BookingSerializer, AvailabilitySerializer
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.list import ListView
+from django.urls import reverse_lazy
+from .models import Booking
 
-"""
-class BookingList(generics.ListCreateAPIView):
-    queryset = Booking.objects.all()
-    serializer_class = BookingSerializer
+class BookingCreateView(CreateView):
+    model = Booking
+    fields = ['customer_name', 'email', 'phone_number', 'date', 'time', 'num_seats']
+    success_url = reverse_lazy('booking_list')
 
-class BookingDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Booking.objects.all()
-    serializer_class = BookingSerializer
+class BookingUpdateView(UpdateView):
+    model = Booking
+    fields = ['customer_name', 'email', 'phone_number', 'date', 'time', 'num_seats']
+    success_url = reverse_lazy('booking_list')
 
-class AvailabilityList(generics.ListCreateAPIView):
-    queryset = Availability.objects.all()
-    serializer_class = AvailabilitySerializer
+class BookingDeleteView(DeleteView):
+    model = Booking
+    success_url = reverse_lazy('booking_list')
 
-class AvailabilityDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Availability.objects.all()
-    serializer_class = AvailabilitySerializer
-
-"""
-
-# Create your views here.
+class BookingListView(ListView):
+    model = Booking
 
 
 def fastfood_home(request):
