@@ -1,6 +1,5 @@
-// booking.js
 $(document).ready(function() {
-    $("#booking-form").submit(function(e) {
+    $("form").submit(function(e) {
       e.preventDefault();
       $.ajax({
         type: "POST",

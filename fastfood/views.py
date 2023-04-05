@@ -28,20 +28,8 @@ def fastfood_home(request):
     return render(request, 'fastfood/fastfood_home.html')
 
 
-# def booking(request):
-#    return render(request, 'fastfood/booking.html')
-
-
 def booking(request):
-    if request.method == 'POST':
-        form = BookingForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Your booking has been confirmed!')
-            return redirect('fastfood_home')
-    else:
-        form = BookingForm()
-    return render(request, 'fastfood/booking.html', {'form': form})
+    return render(request, 'fastfood/booking.html')
 
 
 def contactus(request):
