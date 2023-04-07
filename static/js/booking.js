@@ -31,8 +31,8 @@ $(document).ready(function() {
         if (data["success"]) {
           // Display confirmation message in a pop-up dialog
           alert("Booking confirmed!");
-          // Redirect to the home page
-          window.location.replace("{% url 'fastfood_home' %}");
+          // Reset the form fields and reload the page
+          $('form')[0].reset();         
         } else {
           alert("Booking failed!");
         }

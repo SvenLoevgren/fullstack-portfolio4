@@ -5,6 +5,7 @@ from django.urls import reverse_lazy
 from .models import Booking
 from django.contrib import messages
 from .forms import BookingForm
+from django.http import JsonResponse
 
 class BookingCreateView(CreateView):
     model = Booking
@@ -29,7 +30,37 @@ def fastfood_home(request):
 
 
 def booking(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+
+        return JsonResponse({'success': True})
+    else:
+        return render(request, 'fastfood/booking.html')
+
+"""
+def booking(request):
     return render(request, 'fastfood/booking.html')
+
+-------------------------------
+from django.shortcuts import render
+from django.http import JsonResponse
+
+def booking(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+
+        # Here you could add any additional validation or processing of the form data
+        # For example, checking if the user is allowed to make a booking based on their account status.
+
+        # Once the form data has been validated and processed, you can return a JSON response indicating success.
+        return JsonResponse({'success': True})
+    else:
+        return render(request, 'booking.html')
+"""
 
 
 def contactus(request):
