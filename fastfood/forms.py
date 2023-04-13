@@ -1,5 +1,5 @@
 from django import forms
-from fastfood.models import Booking
+from .models import Booking
 
 
 class BookingForm(forms.ModelForm):

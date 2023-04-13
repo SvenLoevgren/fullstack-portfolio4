@@ -2,9 +2,9 @@ from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from django.urls import reverse_lazy
-from fastfood.models import Booking
+from .models import Booking
 from django.contrib import messages
-from fastfood.forms import BookingForm
+from .forms import BookingForm
 from django.http import JsonResponse
 
 class BookingCreateView(CreateView):
@@ -33,13 +33,14 @@ def fastfood_home(request):
 
 def booking(request):
     if request.method == 'POST':
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        phone = request.POST.get('phone')
-
-        return JsonResponse({'success': True})
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your booking has been confirmed, we will contact you via email - or you can contact us if you need to change your booking!')
+            return redirect('booking')
     else:
-        return render(request, 'fastfood/booking.html')
+        form = BookingForm()
+    return render(request, 'fastfood/booking.html', {'form': form})
 
 
 def contactus(request):

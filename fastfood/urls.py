@@ -1,12 +1,12 @@
 from django.contrib import admin
-from fastfood.views import fastfood_home, booking, contactus
+from .views import fastfood_home, booking, contactus
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.urls import include, path
 from django.views.generic.base import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.static import serve
-from fastfood.views import BookingCreateView, BookingUpdateView, BookingDeleteView, BookingListView
+from .views import BookingCreateView, BookingUpdateView, BookingDeleteView, BookingListView
 
 app_name = 'fastfood'
 
