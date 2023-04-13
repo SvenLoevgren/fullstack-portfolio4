@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("form").submit(function(e) {
+  $("#BookingForm").submit(function(e) {
     e.preventDefault();
     
     // Define a validation function that checks the form fields

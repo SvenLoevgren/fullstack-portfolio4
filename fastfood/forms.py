@@ -1,5 +1,6 @@
 from django import forms
-from .models import Booking
+from fastfood.models import Booking
+
 
 class BookingForm(forms.ModelForm):
     class Meta:
