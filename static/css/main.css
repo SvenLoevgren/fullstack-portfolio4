@@ -138,6 +138,12 @@ section {
     background-color: rgb(188, 225, 235);
 }
 
+.messages {
+    font-size: large;
+    font-weight: bold;
+    color: rgb(145, 23, 62);
+}
+
 /* -----------------------------------------Buttons */
 
 #join-button {
@@ -156,7 +162,7 @@ section {
 @media screen and (max-width: 1000px){
 
     #div4 {
-        padding-top: 22%;
+        padding-top: 19%;
     }
 
 }
@@ -164,7 +170,7 @@ section {
 @media screen and (max-width: 600px){
 
     #div4 {
-        padding-top: 36%;
+        padding-top: 32%;
     }
 
 }

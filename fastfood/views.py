@@ -36,7 +36,7 @@ def booking(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your booking has been confirmed, we will contact you via email - or you can contact us if you need to change your booking!')
+            messages.success(request, 'Your booking has been confirmed, we will contact you via email!')
             return redirect('booking')
     else:
         form = BookingForm()

@@ -1,12 +1,13 @@
+/*
 $(document).ready(function() {
-  $("#BookingForm").submit(function(e) {
+  $("form").submit(function(e) {
     e.preventDefault();
     
     // Define a validation function that checks the form fields
     function validateForm() {
-      var name = $("#name").val();
+      var name = $("#customer_name").val();
       var email = $("#email").val();
-      var phone = $("#phone").val();
+      var phone = $("#phone_number").val();
       
       if (name === "" || email === "" || phone === "") {
         alert("Please fill in all required fields.");
@@ -42,4 +43,4 @@ $(document).ready(function() {
       }
     });
   });
-});
+}); */

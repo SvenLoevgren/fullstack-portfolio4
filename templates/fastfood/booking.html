@@ -4,8 +4,16 @@
 {% block content %}
 <section class="container-fluid">
     <div id="div4" class="container-fluid">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-center text-center">
+              <h2>You want to eat at our restaurant?</h2>
+            </div>
+            <div class="d-flex justify-content-center text-center">
+              <p>Please reserve a table, using the registration-form below, and we will be happy to serve you!</p>
+            </div>
+        </div>
         <form method="POST" class="form-control" id="booking-tables">
-                <input type="hidden" name="csrfmiddlewaretoken" value="dpfScLM1CujCiqpS5i2KvNcGJKyBaxxQCeCrQ8FIb3RdCX97gike87hkfkGe8eAt">
+            {% csrf_token %}
                 <p>
                     <label for="id_customer_name">Customer name:</label> 
                     <input type="text" name="customer_name" maxlength="100" required="" id="id_customer_name" placeholder="your name">
@@ -29,15 +37,15 @@
                     <label for="id_num_seats">Num seats:</label> 
                     <input type="number" name="num_seats" min="0" required="" id="id_num_seats" placeholder="quantity of seats">
                 </p>
-                <button type="submit" class="btn btn-primary" id="join-button">Reserv!</button>
+                <button type="submit" class="btn btn-primary" id="join-button">Reserve!</button>
         </form>
 
         {% if messages %}
-            <ul class="messages">
+            <div class="messages text-center">
                 {% for message in messages %}
-                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
                 {% endfor %}
-            </ul>
+            </div>
         {% endif %}
     </div>
 </section>
