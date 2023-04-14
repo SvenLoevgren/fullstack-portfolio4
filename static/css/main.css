@@ -95,6 +95,10 @@ section {
     padding-top: 11%;
 }
 
+#div5 {
+    padding-top: 7%;
+}
+
 #contacting-link {
     margin-top: 6%;
 }
@@ -136,6 +140,7 @@ section {
 
 #booking-tables {
     background-color: rgb(188, 225, 235);
+    padding-bottom: 16%;
 }
 
 .messages {
@@ -165,12 +170,20 @@ section {
         padding-top: 19%;
     }
 
+    #div5 {
+        padding-top: 16%;
+    }
+
 }
 
 @media screen and (max-width: 600px){
 
     #div4 {
         padding-top: 32%;
+    }
+
+    #div5 {
+        padding-top: 29%;
     }
 
 }
