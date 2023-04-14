@@ -1,9 +1,53 @@
 {% extends 'fastfood/base.html' %}
 
+
 {% block content %}
 <section class="container-fluid">
     <div id="div4" class="container-fluid">
-        <form method="POST">
+        <form method="POST" class="form-control" id="booking-tables">
+                <input type="hidden" name="csrfmiddlewaretoken" value="dpfScLM1CujCiqpS5i2KvNcGJKyBaxxQCeCrQ8FIb3RdCX97gike87hkfkGe8eAt">
+                <p>
+                    <label for="id_customer_name">Customer name:</label> 
+                    <input type="text" name="customer_name" maxlength="100" required="" id="id_customer_name" placeholder="your name">
+                </p>
+                <p>
+                    <label for="id_email">Email:</label> 
+                    <input type="email" name="email" maxlength="254" required="" id="id_email" placeholder="your@mail">
+                </p>
+                <p>
+                    <label for="id_phone_number">Phone number:</label> 
+                    <input type="text" name="phone_number" maxlength="20" required="" id="id_phone_number" placeholder="mobile">
+                </p>
+                <p>
+                    <label for="id_date">Date:</label> 
+                    <input type="text" name="date" required="" id="id_date" placeholder="yyyy-mm-dd">
+                </p>
+                <p>
+                    <label for="id_time">Time:</label> 
+                    <input type="text" name="time" required="" id="id_time" placeholder="hh:mm"></p>
+                <p>
+                    <label for="id_num_seats">Num seats:</label> 
+                    <input type="number" name="num_seats" min="0" required="" id="id_num_seats" placeholder="quantity of seats">
+                </p>
+                <button type="submit" class="btn btn-primary" id="join-button">Reserv!</button>
+        </form>
+
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
+
+
+    
+
+
+       <!-- <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -18,7 +62,7 @@
         {% endif %}
 
     
-    <!-- <form method="POST" id="BookingForm">
+     <form method="POST" id="BookingForm">
             {% csrf_token %}
             <div class="row mb-3">
                 <label for="customer_name" class="col-sm-2 col-form-label">Customer Name</label>
@@ -62,8 +106,6 @@
                 </div>
             </div>
         </form>  -->      
-    </div>
-</section>
-{% endblock %}
+
 
 

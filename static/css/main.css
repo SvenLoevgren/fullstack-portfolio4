@@ -50,6 +50,17 @@
     
 /* ----------------------------------------Sections */
 
+/* Landing-page-aboutus-Section */
+
+.div-borders {
+    border: 3px solid #2e0363;
+    border-radius: 8px;
+}
+
+.div-borders:hover {
+    border-color: #ece9e9;
+}
+
 /* Set the height of each section to 100% of the viewport */
 section {
     height: 100vh;
@@ -97,7 +108,7 @@ section {
     background-size: 100% 100%;
 }
 
-/* ------------Aboutus-page-Contactus-Form-Sections */
+/* Aboutus-page-Contactus-Form-Section */
 
 #text-input-field {
     border: 3px solid #2e0363;
@@ -120,7 +131,15 @@ section {
 #booking-link:hover {
     text-decoration: underline;   
 }
+
+/* Booking-page-Form-Section */
+
+#booking-tables {
+    background-color: rgb(188, 225, 235);
+}
+
 /* -----------------------------------------Buttons */
+
 #join-button {
     background-color: #f16c6b;
     color: #fafafa;
@@ -132,25 +151,7 @@ section {
     color: #f16c6b;
 }
 
-/* ---------------------Landing-page-aboutus-Section */
-
-.div-borders {
-        border: 3px solid #2e0363;
-        border-radius: 8px;
-}
-    
-.div-borders:hover {
-        border-color: #ece9e9;
-}
-
-/* .z-index {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
-  */
+/* -------------------------------------Mediascreens */
 
 @media screen and (max-width: 1000px){
 
