@@ -2,7 +2,7 @@ from django.db import models
 
 class Booking(models.Model):
     customer_name = models.CharField(max_length=100)
-    email = models.EmailField()
+    email = models.EmailField(max_length=255)
     phone_number = models.CharField(max_length=20)
     date = models.DateField()
     time = models.TimeField()
