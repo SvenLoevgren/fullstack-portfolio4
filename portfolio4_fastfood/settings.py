@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.views.static',
+    'allauth',
+    'allauth.account',
     'fastfood',
 ]
 
@@ -95,6 +97,10 @@ WSGI_APPLICATION = 'portfolio4_fastfood.wsgi.application'
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
 # }
+AUTHENTICATION_BACKENDS = [    'django.contrib.auth.backends.ModelBackend',    'allauth.account.auth_backends.AuthenticationBackend',]
+
+SITE_ID = 1
+
 
 DATABASES = {
    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))

@@ -4,20 +4,21 @@ from django.views.generic.list import ListView
 from django.urls import reverse_lazy
 from .models import Booking
 from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import BookingForm
 from django.http import JsonResponse
 
-class BookingCreateView(CreateView):
+class BookingCreateView(LoginRequiredMixin, CreateView):
     model = Booking
     fields = ['customer_name', 'email', 'phone_number', 'date', 'time', 'num_seats']
     success_url = reverse_lazy('booking_list')
 
-class BookingUpdateView(UpdateView):
+class BookingUpdateView(LoginRequiredMixin, UpdateView):
     model = Booking
     fields = ['customer_name', 'email', 'phone_number', 'date', 'time', 'num_seats']
     success_url = reverse_lazy('booking_list')
 
-class BookingDeleteView(DeleteView):
+class BookingDeleteView(LoginRequiredMixin, DeleteView):
     model = Booking
     success_url = reverse_lazy('booking_list')
 

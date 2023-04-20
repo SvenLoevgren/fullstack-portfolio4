@@ -22,4 +22,5 @@ urlpatterns = [
         path('<int:pk>/delete/', BookingDeleteView.as_view(), name='booking_delete'),
     ])),
     path('contactus/', contactus, name='contactus'),
+    path('accounts/', include('allauth.urls')),
 ]
