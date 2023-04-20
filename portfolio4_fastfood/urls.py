@@ -1,4 +1,4 @@
-from django.contrib import admin
+""" from django.contrib import admin
 from fastfood.views import fastfood_home, booking, contactus
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.urls import include, path
@@ -22,4 +22,4 @@ urlpatterns = [
         path('<int:pk>/delete/', BookingDeleteView.as_view(), name='booking_delete'),
     ])),
     path('contactus/', contactus, name='contactus'),
-]
+] """
