@@ -2,6 +2,7 @@ from django.contrib import admin
 from .views import fastfood_home, booking, contactus
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.urls import include, path
+from django.conf.urls import url, include
 from django.views.generic.base import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
@@ -14,6 +15,7 @@ app_name = 'fastfood'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', fastfood_home, name='fastfood_home'),
+    path('accounts/', include('allauth.urls')),
     path('booking/', booking, name='booking'),
     path('booking/', include([
         path('', BookingListView.as_view(), name='booking_list'),
@@ -22,5 +24,4 @@ urlpatterns = [
         path('<int:pk>/delete/', BookingDeleteView.as_view(), name='booking_delete'),
     ])),
     path('contactus/', contactus, name='contactus'),
-    path('accounts/', include('allauth.urls')),
 ]

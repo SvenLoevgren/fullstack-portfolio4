@@ -2,6 +2,7 @@
 from fastfood.views import fastfood_home, booking, contactus
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.urls import include, path
+from django.conf.urls import url, include
 from django.views.generic.base import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
@@ -22,4 +23,6 @@ urlpatterns = [
         path('<int:pk>/delete/', BookingDeleteView.as_view(), name='booking_delete'),
     ])),
     path('contactus/', contactus, name='contactus'),
+    path('accounts/', include('django.contrib.auth.urls')),
+    url(r'^accounts/', include('allauth.urls')),
 ] """
