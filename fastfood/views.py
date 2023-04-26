@@ -46,3 +46,7 @@ def booking(request):
 
 def contactus(request):
     return render(request, 'fastfood/contactus.html')
+
+
+def booking_list(request):
+    return render(request, 'fastfood/booking_list.html')

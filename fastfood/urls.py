@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .views import fastfood_home, booking, contactus
+from .views import fastfood_home, booking, contactus, booking_list
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.urls import include, path
 from django.conf.urls import url, include
@@ -17,8 +17,9 @@ urlpatterns = [
     path('', fastfood_home, name='fastfood_home'),
     path('accounts/', include('allauth.urls')),
     path('booking/', booking, name='booking'),
-    path('booking/', include([
-        path('', BookingListView.as_view(), name='booking_list'),
+    path('bookings/', booking_list, name='bookings'),
+    path('bookings/', include([
+        path('list/', BookingListView.as_view(), name='booking_list'),
         path('new/', BookingCreateView.as_view(), name='booking_new'),
         path('<int:pk>/edit/', BookingUpdateView.as_view(), name='booking_edit'),
         path('<int:pk>/delete/', BookingDeleteView.as_view(), name='booking_delete'),
