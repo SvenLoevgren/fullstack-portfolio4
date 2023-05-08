@@ -49,4 +49,5 @@ def contactus(request):
 
 
 def booking_list(request):
-    return render(request, 'fastfood/booking_list.html')
+    bookings = Booking.objects.all()
+    return render(request, 'fastfood/booking_list.html', {'bookings': bookings})
