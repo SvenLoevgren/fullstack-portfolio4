@@ -103,6 +103,10 @@ section {
     padding-top: 7%;
 }
 
+#base_div {
+    padding-top: 9%;
+}
+
 #contacting-link {
     margin-top: 6%;
 }
@@ -178,6 +182,10 @@ section {
         padding-top: 16%;
     }
 
+    #base_div {
+        padding-top: 14%;
+    }
+
 }
 
 @media screen and (max-width: 600px){
@@ -188,6 +196,10 @@ section {
 
     #div5 {
         padding-top: 29%;
+    }
+
+    #base_div {
+        padding-top: 27%;
     }
 
 }
