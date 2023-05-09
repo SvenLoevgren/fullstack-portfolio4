@@ -1,10 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from django.core.validators import RegexValidator
+
 class Booking(models.Model):
     customer_name = models.CharField(max_length=100)
     email = models.EmailField(max_length=255)
-    phone_number = models.CharField(max_length=20)
+    phone_number_regex = RegexValidator(regex=r'^\+?\d{1,3}[-\.\s]?\d{1,14}[-\.\s]?\d{1,14}$',
+        message="Phone number must be entered in the format: '+999999999'. Up to 14 digits allowed.")
+    phone_number = models.CharField(validators=[phone_number_regex], max_length=20)
     date = models.DateField()
     time = models.TimeField()
     num_seats = models.PositiveIntegerField()
