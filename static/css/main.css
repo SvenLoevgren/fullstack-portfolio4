@@ -105,6 +105,7 @@ section {
 
 #base_div {
     padding-top: 9%;
+    background-color: #fafafa;
 }
 
 #contacting-link {
@@ -183,7 +184,7 @@ section {
     }
 
     #base_div {
-        padding-top: 14%;
+        padding-top: 27%;
     }
 
 }
@@ -199,7 +200,7 @@ section {
     }
 
     #base_div {
-        padding-top: 27%;
+        padding-top: 36%;
     }
 
 }
