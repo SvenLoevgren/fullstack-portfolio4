@@ -104,7 +104,7 @@ section {
 }
 
 #base_div {
-    padding-top: 9%;
+    padding-top: 8%;
     background-color: #fafafa;
 }
 
@@ -158,6 +158,13 @@ section {
     color: rgb(145, 23, 62);
 }
 
+/* Booking_list-page-Form-Section */
+
+td:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 /* -----------------------------------------Buttons */
 
 #join-button {
@@ -184,7 +191,7 @@ section {
     }
 
     #base_div {
-        padding-top: 27%;
+        padding-top: 14%;
     }
 
 }
@@ -200,7 +207,7 @@ section {
     }
 
     #base_div {
-        padding-top: 36%;
+        padding-top: 27%;
     }
 
 }

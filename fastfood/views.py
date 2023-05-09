@@ -1,31 +1,43 @@
-from django.shortcuts import render, redirect
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from django.urls import reverse_lazy
-from .models import Booking
+from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin
+from .models import Booking
 from .forms import BookingForm
-from django.http import JsonResponse
 
 class BookingCreateView(LoginRequiredMixin, CreateView):
     model = Booking
-    fields = ['customer_name', 'email', 'phone_number', 'date', 'time', 'num_seats']
+    fields = ['customer_name', 'email', 'phone_number', 'date', 'time', 'num_seats', 'user']
     success_url = reverse_lazy('booking_list')
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
 
 class BookingUpdateView(LoginRequiredMixin, UpdateView):
     model = Booking
-    fields = ['customer_name', 'email', 'phone_number', 'date', 'time', 'num_seats']
+    fields = ['customer_name', 'email', 'phone_number', 'date', 'time', 'num_seats', 'user']
     success_url = reverse_lazy('booking_list')
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
 
 class BookingDeleteView(LoginRequiredMixin, DeleteView):
     model = Booking
     success_url = reverse_lazy('booking_list')
 
-class BookingListView(ListView):
-    model = Booking
 
-# <a href="{% url 'your_app_name:booking_list' %}">View Bookings</a>
+class BookingListView(LoginRequiredMixin, ListView):
+    model = Booking
+    template_name = 'fastfood/booking_list.html'
+
+    def get_queryset(self):
+        return Booking.objects.filter(user=self.request.user)
 
 
 def fastfood_home(request):
@@ -36,7 +48,9 @@ def booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
-            form.save()
+            booking = form.save(commit=False)
+            booking.user = request.user
+            booking.save()
             messages.success(request, 'Your booking has been confirmed, we will contact you via email!')
             return redirect('booking')
     else:
@@ -48,10 +62,11 @@ def contactus(request):
     return render(request, 'fastfood/contactus.html')
 
 
-def booking_list(request):
-    bookings = Booking.objects.all()
-    return render(request, 'fastfood/booking_list.html', {'bookings': bookings})
-
-
 def edit_booking(request):
     return render(request, 'fastfood/edit_booking.html')
+
+
+def booking_list(request):
+    bookings = Booking.objects.filter(user=request.user)
+    context = {'bookings': bookings}
+    return render(request, 'fastfood/booking_list.html', context)

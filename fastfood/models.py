@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Booking(models.Model):
     customer_name = models.CharField(max_length=100)
@@ -7,6 +8,7 @@ class Booking(models.Model):
     date = models.DateField()
     time = models.TimeField()
     num_seats = models.PositiveIntegerField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class Availability(models.Model):
     date = models.DateField()
