@@ -38,6 +38,14 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["fastfood.herokuapp.com", "localhost"]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://github.com',
+    'https://*.github.com',
+    'https://herokuapp.com',
+    'https://*.herokuapp.com',
+    'https://*.gitpod.io'
+    # Add any other trusted origins if needed
+]
 
 # Application definition
 
