@@ -18,7 +18,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('booking/', booking, name='booking'),
     path('bookings/', booking_list, name='bookings'),
-    path('edit_booking/', edit_booking, name='edit_booking'),
+    path('edit_booking/<int:booking_id>/', edit_booking, name='edit_booking'),
     path('edit_booking/', include([
         path('list/', BookingListView.as_view(), name='booking_list'),
         path('new/', BookingCreateView.as_view(), name='booking_new'),

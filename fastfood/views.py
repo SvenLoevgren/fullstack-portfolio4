@@ -62,8 +62,13 @@ def contactus(request):
     return render(request, 'fastfood/contactus.html')
 
 
-def edit_booking(request):
-    return render(request, 'fastfood/edit_booking.html')
+def edit_booking(request, booking_id):
+    booking = Booking.objects.get(id=booking_id)
+    context = {
+        'booking_id': booking_id,
+        'booking': booking
+    }
+    return render(request, 'fastfood/edit_booking.html', context)
 
 
 def booking_list(request):
