@@ -184,6 +184,17 @@ td:hover {
     font-weight: bold;
 }
 
+#delete-button {
+    background-color: #f16c6b;
+    color: #fafafa;
+    font-weight:bolder 
+}
+
+#delete-button:hover {
+    background-color: #f0f469;
+    color: #f53838;
+}
+
 #join-button:hover {
     background-color: #fafafa;
     color: #f16c6b;

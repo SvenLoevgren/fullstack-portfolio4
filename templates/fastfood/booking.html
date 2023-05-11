@@ -63,7 +63,7 @@
                     <div class="col-sm-10 offset-sm-2">
                         {% if user.is_authenticated %}
                         <button type="submit" class="btn btn-primary mx-auto" id="join-button">Reserve!</button>
-                        <button id="join-button" class="btn btn-secondary mx-auto" onclick="window.location.href='{% url 'bookings' %}'">View/Bookings!</button>
+                        <button type="button" id="join-button" class="btn btn-secondary mx-auto" onclick="window.location.href='{% url 'bookings' %}'">View/Bookings!</button>
                         {% else %}
                         <button type="button" onclick="alert('Please login to make a booking.')" class="btn btn-primary mx-auto" id="join-button">Reserve!</button>
                         <button type="button" onclick="alert('Please login to make a booking.')" id="join-button" class="btn btn-secondary mx-auto" href="#">View/Bookings!</button>

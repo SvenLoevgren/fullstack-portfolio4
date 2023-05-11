@@ -2,7 +2,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from django.urls import reverse_lazy
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Booking
 from .forms import BookingForm
@@ -62,8 +62,17 @@ def contactus(request):
     return render(request, 'fastfood/contactus.html')
 
 
+def delete_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    context = {
+        'booking_id': booking_id,
+        'booking': booking
+    }
+    return render(request, 'fastfood/edit_booking.html', context)
+
+
 def edit_booking(request, booking_id):
-    booking = Booking.objects.get(id=booking_id)
+    booking = get_object_or_404(Booking, id=booking_id)
     context = {
         'booking_id': booking_id,
         'booking': booking
