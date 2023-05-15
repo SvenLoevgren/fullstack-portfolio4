@@ -64,12 +64,15 @@ def contactus(request):
 
 def delete_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
+    if request.method == 'POST':
+        booking.delete()
+        messages.success(request, 'Your booking has been deleted successfully.')
+        return redirect('delete_booking')
     context = {
         'booking_id': booking_id,
         'booking': booking
     }
-    return render(request, 'fastfood/edit_booking.html', context)
-
+    return render(request, 'fastfood/delete_booking.html', context)
 
 def edit_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
