@@ -26,5 +26,5 @@ urlpatterns = [
         path('<int:pk>/delete/', BookingDeleteView.as_view(), name='booking_delete'),
     ])),
     path('contactus/', contactus, name='contactus'),
-    path('delete_booking/<int:booking_id>/', delete_booking, name='delete_booking'),
+    path('delete_booking/', delete_booking, name='delete_booking'),
 ]

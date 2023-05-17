@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 from django.core.validators import RegexValidator
 
+
 class Booking(models.Model):
     customer_name = models.CharField(max_length=100)
     email = models.EmailField(max_length=255)
@@ -13,6 +14,7 @@ class Booking(models.Model):
     time = models.TimeField()
     num_seats = models.PositiveIntegerField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
 
 class Availability(models.Model):
     date = models.DateField()

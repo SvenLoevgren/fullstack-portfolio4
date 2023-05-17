@@ -7,6 +7,7 @@ from django.contrib import messages
 from .models import Booking
 from .forms import BookingForm
 
+
 class BookingCreateView(LoginRequiredMixin, CreateView):
     model = Booking
     fields = ['customer_name', 'email', 'phone_number', 'date', 'time', 'num_seats', 'user']
@@ -29,7 +30,8 @@ class BookingUpdateView(LoginRequiredMixin, UpdateView):
 
 class BookingDeleteView(LoginRequiredMixin, DeleteView):
     model = Booking
-    success_url = reverse_lazy('booking_list')
+    success_url = reverse_lazy('delete_booking')
+    template_name = 'fastfood/booking_confirm_delete.html'
 
 
 class BookingListView(LoginRequiredMixin, ListView):
@@ -62,17 +64,9 @@ def contactus(request):
     return render(request, 'fastfood/contactus.html')
 
 
-def delete_booking(request, booking_id):
-    booking = get_object_or_404(Booking, id=booking_id)
-    if request.method == 'POST':
-        booking.delete()
-        messages.success(request, 'Your booking has been deleted successfully.')
-        return redirect('delete_booking')
-    context = {
-        'booking_id': booking_id,
-        'booking': booking
-    }
-    return render(request, 'fastfood/delete_booking.html', context)
+def delete_booking(request):
+    return render(request, 'fastfood/delete_booking.html')
+
 
 def edit_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
