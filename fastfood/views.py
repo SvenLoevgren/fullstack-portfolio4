@@ -21,7 +21,7 @@ class BookingCreateView(LoginRequiredMixin, CreateView):
 class BookingUpdateView(LoginRequiredMixin, UpdateView):
     model = Booking
     fields = ['customer_name', 'email', 'phone_number', 'date', 'time', 'num_seats', 'user']
-    success_url = reverse_lazy('booking_list')
+    success_url = reverse_lazy('bookings')
     template_name = 'fastfood/booking_form.html'
 
     def form_valid(self, form):
