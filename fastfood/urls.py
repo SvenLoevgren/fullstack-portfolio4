@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .views import fastfood_home, booking, contactus, booking_list, edit_booking, delete_booking
+from .views import fastfood_home, booking, contactus, booking_list, edit_booking, delete_booking, booking_update
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.urls import include, path
 from django.conf.urls import url, include
@@ -27,4 +27,5 @@ urlpatterns = [
     ])),
     path('contactus/', contactus, name='contactus'),
     path('delete_booking/', delete_booking, name='delete_booking'),
+    path('update_booking/', booking_update, name='update_booking'),
 ]

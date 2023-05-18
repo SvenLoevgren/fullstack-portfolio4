@@ -108,6 +108,11 @@ section {
     background-color: #fafafa;
 }
 
+#message_div {
+    padding-top: 11%;
+    background-color: #fafafa;
+}
+
 #contacting-link {
     margin-top: 6%;
 }
@@ -216,6 +221,10 @@ td:hover {
         padding-top: 14%;
     }
 
+    #message_div {
+        padding-top: 16%;
+    }
+
 }
 
 @media screen and (max-width: 600px){
@@ -230,6 +239,10 @@ td:hover {
 
     #base_div {
         padding-top: 27%;
+    }
+
+    #message_div {
+        padding-top: 33%;
     }
 
 }

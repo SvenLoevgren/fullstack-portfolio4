@@ -22,9 +22,11 @@ class BookingUpdateView(LoginRequiredMixin, UpdateView):
     model = Booking
     fields = ['customer_name', 'email', 'phone_number', 'date', 'time', 'num_seats', 'user']
     success_url = reverse_lazy('booking_list')
+    template_name = 'fastfood/booking_form.html'
 
     def form_valid(self, form):
         form.instance.user = self.request.user
+        messages.success(self.request, 'Booking updated successfully!')
         return super().form_valid(form)
 
 
@@ -66,6 +68,10 @@ def contactus(request):
 
 def delete_booking(request):
     return render(request, 'fastfood/delete_booking.html')
+
+
+def booking_update(request):
+    return render(request, 'fastfood/booking_form.html')
 
 
 def edit_booking(request, booking_id):

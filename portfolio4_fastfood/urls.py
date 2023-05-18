@@ -18,5 +18,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('booking/', booking, name='booking'),
     path('booking/', include('fastfood.urls')),
+    path('edit_booking/', include('fastfood.urls')),
     path('contactus/', contactus, name='contactus'),
 ]
