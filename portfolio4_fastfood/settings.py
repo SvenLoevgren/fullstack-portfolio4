@@ -36,7 +36,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["fastfood.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["fastfood.herokuapp.com", "localhost", '8000-svenloevgre-fullstackpo-fdsfjn6e7jc.ws-eu97.gitpod.io']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://github.com',
