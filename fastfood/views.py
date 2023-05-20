@@ -56,7 +56,7 @@ def booking(request):
             booking.user = request.user
             booking.save()
             messages.success(request, 'Your booking has been confirmed, we will contact you via email!')
-            return redirect('booking')
+            return redirect('bookings')
     else:
         form = BookingForm()
     return render(request, 'fastfood/booking.html', {'form': form})

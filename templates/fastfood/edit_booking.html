@@ -5,10 +5,10 @@
     <div id="div5" class="container-fluid">
         <div class="col-md-12">
             <div class="d-flex justify-content-center text-center">
-              <h2>Here you can change or delete your selected booking!</h2>
+              <h2>See details of your booking, and click on Update or Delete to make any changes!</h2>
             </div>
             <div class="d-flex justify-content-center text-center">
-              <p>Please make your adjustments for booking <em>no:</em> <strong>{{ booking_id }}</strong>,
+              <p>On the next page you can make adjustments for booking <em>no:</em> <strong>{{ booking_id }}</strong>,
                  and contact us if there is a problem -via our <a id="contact-link" href="{% url 'contactus' %}">
                     contact page! <i class="fa fa-envelope"></i></a></p>
             </div>
@@ -25,42 +25,42 @@
                     <label for="id_customer_name" class="col-sm-2 col-form-label">Customer Name</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" name="customer_name" maxlength="100"
-                         required="" id="id_customer_name" placeholder="your name" value="{{ booking.customer_name }}">
+                         readonly id="id_customer_name" placeholder="your name" value="{{ booking.customer_name }}">
                     </div>
                 </div>    
                 <div class="row mb-3">
                     <label for="id_email" class="col-sm-2 col-form-label">Email:</label> 
                     <div class="col-sm-10">
                         <input type="email" class="form-control" name="email" maxlength="254" 
-                        required="" id="id_email" placeholder="your@mail" value="{{ booking.email }}">
+                        readonly id="id_email" placeholder="your@mail" value="{{ booking.email }}">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label for="id_phone_number" class="col-sm-2 col-form-label">Phone number:</label>
                     <div class="col-sm-10">
                         <input type="tel" class="form-control" name="phone_number" maxlength="20" 
-                        required="" id="id_phone_number" placeholder="mobile" value="{{ booking.phone_number }}">
+                        readonly id="id_phone_number" placeholder="mobile" value="{{ booking.phone_number }}">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label for="id_date" class="col-sm-2 col-form-label">Date:</label>
                     <div class="col-sm-10">
                         <input type="date" class="form-control" name="date" 
-                        required="" id="id_date" placeholder="yyyy-mm-dd" value="{{ booking.date|date:'Y-m-d' }}">
+                        readonly id="id_date" placeholder="yyyy-mm-dd" value="{{ booking.date|date:'Y-m-d' }}">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label for="id_time" class="col-sm-2 col-form-label">Time:</label>
                     <div class="col-sm-10">
                         <input type="time" class="form-control" name="time" 
-                        required="" id="id_time" placeholder="hh:mm" value="{{ booking.time|time:'H:i' }}">
+                        readonly id="id_time" placeholder="hh:mm" value="{{ booking.time|time:'H:i' }}">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label for="id_num_seats" class="col-sm-2 col-form-label">Num seats:</label>
                     <div class="col-sm-10">
                         <input type="number" class="form-control" name="num_seats" min="0" 
-                        required="" id="id_num_seats" placeholder="quantity of seats" value="{{ booking.num_seats }}">
+                        readonly id="id_num_seats" placeholder="quantity of seats" value="{{ booking.num_seats }}">
                     </div>
                 </div>
                 <div class="row">
