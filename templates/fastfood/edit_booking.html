@@ -67,11 +67,11 @@
                     <div class="col-sm-10 offset-sm-2">
                         {% if user.is_authenticated %}
                         <button type="button" class="btn btn-primary mx-auto" id="join-button"
-                        onclick="window.location.href = '{% url 'booking_edit' booking_id %}'">Update!</button>
+                        onclick="window.location.href = '{% url 'booking_edit' user_id booking_id %}'">Update!</button>
                         <button type="button" id="join-button" class="btn btn-secondary mx-auto" 
                         onclick="window.location.href='{% url 'bookings' %}'">View/Bookings!</button>
                         <button type="button" class="btn btn-primary mx-auto" id="delete-button" 
-                        onclick="window.location.href = '{% url 'booking_delete' booking_id %}'">Delete!</button>
+                        onclick="window.location.href = '{% url 'booking_delete' user_id booking_id %}'">Delete!</button>
                         {% else %}
                         <button type="button" onclick="alert('Please login to make a booking.')" class="btn btn-primary mx-auto" id="join-button">Update!</button>
                         <button type="button" onclick="alert('Please login to make a booking.')" id="join-button" class="btn btn-secondary mx-auto" href="#">View/Bookings!</button>

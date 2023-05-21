@@ -24,6 +24,10 @@ class BookingUpdateView(LoginRequiredMixin, UpdateView):
     success_url = reverse_lazy('bookings')
     template_name = 'fastfood/booking_form.html'
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(user=self.request.user)
+
     def form_valid(self, form):
         form.instance.user = self.request.user
         messages.success(self.request, 'Booking updated successfully!')
@@ -34,6 +38,10 @@ class BookingDeleteView(LoginRequiredMixin, DeleteView):
     model = Booking
     success_url = reverse_lazy('delete_booking')
     template_name = 'fastfood/booking_confirm_delete.html'
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(user=self.request.user)
 
 
 class BookingListView(LoginRequiredMixin, ListView):
@@ -74,13 +82,18 @@ def booking_update(request):
     return render(request, 'fastfood/booking_form.html')
 
 
-def edit_booking(request, booking_id):
-    booking = get_object_or_404(Booking, id=booking_id)
-    context = {
-        'booking_id': booking_id,
-        'booking': booking
-    }
-    return render(request, 'fastfood/edit_booking.html', context)
+def edit_booking(request, user_id, booking_id):
+    if request.user.is_authenticated and str(request.user.id) == user_id:
+        booking = get_object_or_404(Booking, id=booking_id, user_id=user_id)
+        context = {
+            'booking_id': booking_id,
+            'booking': booking,
+            'user_id': user_id
+        }
+        return render(request, 'fastfood/edit_booking.html', context)
+    else:
+        # Handle unauthorized access
+        return redirect('unauthorized')
 
 
 def booking_list(request):

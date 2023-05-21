@@ -28,7 +28,7 @@
         </thead>
         <tbody>
             {% for booking in bookings %}
-            <tr class="clickable-row" data-href="{% url 'edit_booking' booking.id %}">
+            <tr class="clickable-row" data-href="{% url 'edit_booking' user.id booking.id %}">
                 <th scope="row">{{ booking.id }}</th>
                 <td>{{ booking.customer_name }}</td>
                 <td>{{ booking.date }}</td>
