@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .views import fastfood_home, booking, contactus, booking_list, edit_booking, delete_booking, booking_update
+from .views import fastfood_home, booking, contactus, booking_list, edit_booking, delete_booking, booking_update, unauthorized
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.urls import include, path
 from django.conf.urls import url, include
@@ -16,6 +16,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', fastfood_home, name='fastfood_home'),
     path('accounts/', include('allauth.urls')),
+    path('unauthorized/', unauthorized, name='unauthorized'),
     path('booking/', booking, name='booking'),
     path('bookings/', booking_list, name='bookings'),
     path('edit_booking/<str:user_id>/<int:booking_id>/', edit_booking, name='edit_booking'),

@@ -86,6 +86,10 @@ def booking_update(request):
     return render(request, 'fastfood/booking_form.html')
 
 
+def unauthorized(request):
+    return render(request, 'fastfood/unauthorized.html')
+
+
 def edit_booking(request, user_id, booking_id):
     if request.user.is_authenticated and str(request.user.id) == user_id:
         booking = get_object_or_404(Booking, id=booking_id, user_id=user_id)
