@@ -68,6 +68,10 @@ INSTALLED_APPS = [
     'fastfood',
 ]
 
+SESSION_COOKIE_AGE = 1800  # 30 minutes in seconds
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
