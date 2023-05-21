@@ -46,6 +46,19 @@
             </div>
         </div>
         <input type="submit" value="Save" class="btn btn-primary mx-auto" id="join-button">
+        {% if form.errors %}
+        <div class="messages text-center">
+            <p class="text-danger">Please correct the following errors:</p>
+            <ul class="text-danger">
+                {% for field in form %}
+                {% if field.errors %}
+                <li>{{ field.label }}: {{ field.errors|join:", " }}</li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        
         {% if messages %}
         <div class="messages text-center">
             {% for message in messages %}

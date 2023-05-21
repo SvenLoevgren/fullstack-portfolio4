@@ -28,6 +28,10 @@ class BookingUpdateView(LoginRequiredMixin, UpdateView):
         queryset = super().get_queryset()
         return queryset.filter(user=self.request.user)
 
+    def form_invalid(self, form):
+        messages.error(self.request, 'Phone number = +46-709999999; Date = yyyy-mm-dd; Time = hh:mm')
+        return super().form_invalid(form)
+
     def form_valid(self, form):
         form.instance.user = self.request.user
         messages.success(self.request, 'Booking updated successfully!')
