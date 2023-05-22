@@ -8,8 +8,7 @@
     transition: all 0.5s ease-in-out;
     transform-origin: center center;
     zoom: 1.5;
-}
-    
+}    
 
 #navbar-color {
     background: rgb(184, 183, 199);
@@ -65,12 +64,14 @@
     border-color: #ece9e9;
 }
 
-/* Set the height of each section to 100% of the viewport */
+/* Set the height of each section to 100% vp */
+
 section {
     height: 100vh;
 }
     
-/* Set the background image for the first section */
+/* Set the image for the first section */
+
 #section1 {
     background-image: url('../img/Background_1.png');
     background-repeat: no-repeat;
@@ -83,6 +84,8 @@ section {
     margin-top: 0;
 }
 
+/* MAP image until API is configured for google MAP's */
+
 #section3 img {
     max-width: 100%;
     height: auto;
@@ -94,6 +97,8 @@ section {
 #section3 {
     background: rgb(184, 183, 199);
 }
+
+/* Top-paddings to handle fixed nav-bar */
 
 #div4 {
     padding-top: 11%;
@@ -113,20 +118,12 @@ section {
     background-color: #fafafa;
 }
 
-#contacting-link {
-    margin-top: 6%;
-}
-
-#contacting-link button {
-    margin-top: 4%;
-}
+/* Aboutus-page-Contactus-Form-Section */
 
 #section4 {
     background-color:rgb(197, 199, 247);
     background-size: 100% 100%;
 }
-
-/* Aboutus-page-Contactus-Form-Section */
 
 #text-input-field {
     border: 3px solid #2e0363;
@@ -139,26 +136,6 @@ section {
 
 .field-text {
     font-weight: bold;
-}
-
-#booking-link {
-    text-decoration: none;
-    color: black;    
-}
-
-#contact-link {
-    text-decoration: none;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;    
-}
-
-#contact-link:hover {
-    text-decoration: underline;  
-    font-weight: bold; 
-}
-
-#booking-link:hover {
-    text-decoration: underline;   
 }
 
 /* Booking-page-Form-Section */
@@ -203,6 +180,36 @@ td:hover {
 #join-button:hover {
     background-color: #fafafa;
     color: #f16c6b;
+}
+
+/* -------------------------------------------links */
+
+#booking-link {
+    text-decoration: none;
+    color: black;    
+}
+
+#contact-link {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+#contact-link:hover {
+    text-decoration: underline;  
+    font-weight: bold; 
+}
+
+#booking-link:hover {
+    text-decoration: underline;   
+}
+
+#contacting-link {
+    margin-top: 6%;
+}
+
+#contacting-link button {
+    margin-top: 4%;
 }
 
 /* -------------------------------------Mediascreens */

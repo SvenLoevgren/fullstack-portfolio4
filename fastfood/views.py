@@ -1,21 +1,10 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.views.generic.list import ListView
+from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Booking
 from .forms import BookingForm
-
-
-class BookingCreateView(LoginRequiredMixin, CreateView):
-    model = Booking
-    fields = ['customer_name', 'email', 'phone_number', 'date', 'time', 'num_seats']
-    success_url = reverse_lazy('booking_list')
-
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
 
 
 class BookingUpdateView(LoginRequiredMixin, UpdateView):
@@ -46,14 +35,6 @@ class BookingDeleteView(LoginRequiredMixin, DeleteView):
     def get_queryset(self):
         queryset = super().get_queryset()
         return queryset.filter(user=self.request.user)
-
-
-class BookingListView(LoginRequiredMixin, ListView):
-    model = Booking
-    template_name = 'fastfood/booking_list.html'
-
-    def get_queryset(self):
-        return Booking.objects.filter(user=self.request.user)
 
 
 def fastfood_home(request):
@@ -100,7 +81,7 @@ def edit_booking(request, user_id, booking_id):
         }
         return render(request, 'fastfood/edit_booking.html', context)
     else:
-        # Handle unauthorized access
+        # Handle unauthorized access if user tries to change URL in the web-browser
         return redirect('unauthorized')
 
 
