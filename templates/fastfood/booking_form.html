@@ -8,41 +8,48 @@
             <label for="form.customer_name.id_for_label" class="col-sm-2 col-form-label">Customer Name</label>
             <div class="col-sm-10">
 {{ form.customer_name }}
+<!-- Editable form field inheritedd from BookingForm -->
             </div>
         </div>    
         <div class="row mb-3">
             <label for="{{ form.email.id_for_label }}" class="col-sm-2 col-form-label">Email:</label> 
             <div class="col-sm-10">
 {{ form.email }}
+<!-- Editable form field inheritedd from BookingForm -->
             </div>
         <div class="row mb-3">
             <label for="form.phone_number.id_for_label" class="col-sm-2 col-form-label">Phone number:</label>
             <div class="col-sm-10">
 {{ form.phone_number }}
+<!-- Editable form field inheritedd from BookingForm -->
             </div>
         </div>
         <div class="row mb-3">
             <label for="form.id_date.id_for_label" class="col-sm-2 col-form-label">Date:</label>
             <div class="col-sm-10">
 {{ form.date }}
+<!-- Editable form field inheritedd from BookingForm -->
             </div>
         </div>
         <div class="row mb-3">
             <label for="form.id_time.id_for_label" class="col-sm-2 col-form-label">Time:</label>
             <div class="col-sm-10">
 {{ form.time }}
+<!-- Editable form field inheritedd from BookingForm -->
             </div>
         </div>
         <div class="row mb-3">
             <label for="form.num_seats.id_for_label" class="col-sm-2 col-form-label">Num seats:</label>
             <div class="col-sm-10">
 {{ form.num_seats }}
+<!-- Editable form field inheritedd from BookingForm -->
             </div>
         </div>
         <div class="row mb-3">
             <label for="form.user.id_for_label" class="col-sm-2 col-form-label">User:</label>
             <div class="col-sm-10">
 {{ booking.user }}
+<!-- Displayes user from BookingForm -->
             </div>
         </div>
         <input type="submit" value="Save" class="btn btn-primary mx-auto" id="join-button">

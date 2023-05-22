@@ -8,10 +8,10 @@
             <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
         {% endfor %}
         {% if user.is_authenticated %}
-        <button type="button" id="join-button" class="btn btn-secondary mx-auto" 
-        onclick="window.location.href='{% url 'bookings' %}'">View My Bookings!</button>
+            <button type="button" id="join-button" class="btn btn-secondary mx-auto" 
+            onclick="window.location.href='{% url 'bookings' %}'">View My Bookings!</button>
         {% else %}
-        <button type="button" onclick="alert('Please login to view your bookings.')" id="join-button" class="btn btn-secondary mx-auto" href="#">View/Bookings!</button>
+            <button type="button" onclick="alert('Please login to view your bookings.')" id="join-button" class="btn btn-secondary mx-auto" href="#">View/Bookings!</button>
         {% endif %}
     </div>
     {% else %}
@@ -52,27 +52,3 @@
     });
 </script>
 {% endblock %}
-
-<!--     {% if bookings.has_other_pages %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center mt-3">
-            {% if bookings.has_previous %}
-            <li class="page-item">
-                <a class="page-link" href="?page={{ bookings.previous_page_number }}">&laquo; Previous</a>
-            </li>
-            {% endif %}
-            {% for num in bookings.paginator.page_range %}
-            {% if num == bookings.number %}
-            <li class="page-item active"><a class="page-link" href="#">{{ num }}</a></li>
-            {% elif num > bookings.number|add:'-3' and num < bookings.number|add:'3' %}
-            <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
-            {% endif %}
-            {% endfor %}
-            {% if bookings.has_next %}
-            <li class="page-item">
-                <a class="page-link" href="?page={{ bookings.next_page_number }}">Next &raquo;</a>
-            </li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %} -->
