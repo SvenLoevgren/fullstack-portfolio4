@@ -1,108 +1,192 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Portfolio 4
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/e9298af4-5ee8-43fc-a902-769be5c81a47)
 
-Welcome SvenLoevgren,
+The __*Portfolio 4*__ project is a fullstack developed project that has an APP, for *restarurant bookings* - running on Heroku.
+The APP provides a booking system with CRUD functionality for the "*End User /customer*" and an admin panel for the *staff* to handle full administration of the site... 
+This APP - named **"fastfood"**, will improve the customers collaboration with the restaurant and their staff, by it's simplicity and it also provides a great way to stay in tuned with the digitalization in the near and far future ahead. The site (app) is easy to maintain and open for great future improvement's with *low cost*.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# Existing Features
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+The __*"Fastfood"*__ APP has:
 
-## Gitpod Reminders
+* A landing page - to easy locate and get in touch with the restaurant - and at the same time it represent's what the restaurant is all *about*.
+* A booking system, to book tables at the restaurant - and also full CRUD to manage their own bookings, *when loged_in*.
+* A register and log-in page, needed to access bookings.
+* A contact page . to easy get in touch with the staff and support.
+* An admin page, to handle user-access and bookings.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## The Landing page
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/c2abcfec-4fdb-4371-b5fc-57161ae3f841)
 
-Another blue button should appear to click: _Open Browser_.
+- **This is the first adverticement - with Company name, logo and the navigationbar... scrolling down, the user will get to the about section.**
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/14be11d3-c0b6-4ce5-97d3-7876ace07c01)
+ 
+- **In the about section, there is also an added navigation button to the *booking* page... scrolling down, the user will reach the contact information.**
 
-A blue button should appear to click: _Make Public_,
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/1713667a-e217-46f6-a9d7-3600d7dd2513)
 
-Another blue button should appear to click: _Open Browser_.
+- **In the contact section, there is also an added navigation button to the *contact* page.**
+   1. The user can also see where the restaurant is located with a static map (which can be developed to a dynamic map, by creating an API with google maps).
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## The navigation bar and the footer
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/2eed3f63-b368-4eca-ba1b-0cb135ce4a0e)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- **The navigation bar has multiple functions:**
+   1. It is mobile device responsive, with a toggle button -to expand or collape the navigation
+   2. Once loged-in, the user will only see what is needed in the navigation-bar, to manage their provided services... and vice versa if not registered or loged-out.
+   3. The footer is almost wide open for any customer needs changes - with only the water mark and social-media links present.
 
-------
+## The booking system
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/259a6ad7-d593-46a1-9526-a9c085b0795b)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- **The app -only allows bookings when a user has registered and are loged-in.**
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/3e13e3a5-663b-4e72-a052-24a68757f7ef)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- **Once loged-in you can:**
+   1. Reserv a table.
+   2. View your bookings (reachable via the button or via the navigation bar).
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/ad171b68-cd8b-4595-8915-8a16552fc331)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- **The user will only see their own bookings (The admin panel is different... but we will walk trough the admin panel later in this read me file).**
+   1. By clicking on the booking the user want's to edit - they will get navigated to the detailed view.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/4ba6c858-082d-4a0c-89e3-3e46099467aa)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- **In the detailed view, the user can see all details of the specific booking number they clicked on in the previous view.**
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* In this view... all fields are readable only (**and the user can only view their own booking details**)
+* So the user needs to provide the site with one of these three actions:
+ 1. update (to change their booking - on the next page)
+ 2. View bookings (to toggle back to the list of bookings)
+ 3. delete (toggle to a delete confirmation page)...
+ 
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/62733a01-049c-4057-bae7-ec7b420c2850)
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/f7b51234-2078-4161-b4e8-b9231aa145e8)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- **If clicking on delete, then a confirmation workflow will get triggered, and once the booking is changed, the user will get navigated back to the booking list.**
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/d8a9ad77-ffd8-4016-8436-24537f63e8fb)
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/23acac90-c5db-4f72-9c23-7cd592e1551e)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- **If clicking on update, then a confirmation workflow will get triggered, and once the booking is changed, the user will get navigated back to the booking list.**
+   1. Note that all fields are validated, when updating a booking (the user will get guided to fill in the fields with correct values).
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## The contact-page
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/e4a2d32a-05b4-47ff-8d2b-d583f28cdf74)
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/8552be14-ef99-4b8a-8c27-a3fb065ce5d9)
 
-------
+- **Once navigation, via links, buttons or navbar - to the *contact* page, then there is an email form to fill in (and optional restaurant phone number information)**
+- **The user needs to fill in ithe fields and press send and:**
+ 1. A confirmation alert is sent to the user - via the browser
+ 2. The email API is triggered 
+ 3. A confirmation email is sent to the users email
+ 4. An email is sent to the restaurant
 
-## FAQ about the uptime script
+## The registration and log-in /log-out
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/3908a170-955f-4e47-83c8-29ed48b9d6cd)
 
-**How will this affect me?**
+- **The registration and log-in and log-out is kind of straight forwards... Note, that the social media sign in- is not wired up yet- so either we kepp them there as is and the user gets an error when trying to click on these links, remove them or wire them up, so that the log-in via social media works for the user.
+I have set these on the todo list in my github project.**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+## The admin page
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/3b3bfdad-9ff6-45dd-a92e-02c9eacd0ace)
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/f776696d-6f45-4dd1-9cbe-ce3909f582a8)
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/26d76f47-b8db-405d-a81e-bf51ba03f88d)
 
-**So….?**
+- **The admin page is easy to manage (it is django standard templates), where the staff can view and manage all bookings made via the app.**
+- **The staff can also generate own bookings, on the behalf of users... set up user accounts and access.**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+# Release
 
-**Can I opt out?**
+## back_log and future improvements
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/4f44de8e-2c2e-49cb-8b22-41174b3c44af)
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- **I have created two projects in github... One for this first release, and one for future features:**
 
----
+* Any *Back_log* items, will be transfered to the second project in github - with new milestones.
+   1. User-points, will be attached to the remaining open Issues when starting the next project.
+      - The reason for postponing these open Issues is because the back-log and future improvements goes hand in hand in this project (you cannot have one, without the other, and the best way to decide this is with the customer (What do they want for their restaurant customers?).
 
-Happy coding!
+   2. there is one more open issue, for bugs - that will be detailed explained in the testing scetion below.
+      - This, bug Issue will be transfered to the next project too, though it can be seen as future improvements (the site GUI works as designed by now.. for this first release).
+
+# Testing
+
+## Functional Testing
+
+' **No errors shown in functional testing, where most testing where focused on back-end validation and authentication (security).**
+
+## Validator Testing
+
+' **Some errors were found when performing validator testing, but most of them can be ignored and quick fixes for those who needs attention.**
+
+### Bugs -Solved
+
+ - **HTML validator texting shows two errors, regarding the ID attribute on the landing page (id used twice, so it needs to be renamed or swished to a class attribute instead... (quick fix - to be implemented asap).**
+- **Due to circular code Issues, the quick fix was to change urls. root in settings.py to point at APP urls, instead of the django project urls... this needs to be looked at further, but for now, everything is up and running.**
+
+### Bugs -Remaining
+
+ - **CSS shows many errors (25ea) when testing with W3C validator, but most of the errors points at the bootstrap 5.3 attributes... the site works fine and the css styling does what it suppose to do, so for now this issue will be postponed to the next release.**
+
+# Deployment
+
+## Steps
+
+![image](https://github.com/SvenLoevgren/fullstack-portfolio4/assets/119969411/f9caad98-70b2-46bb-ab9d-2d018bf66337)
+
+1. env.py created to hide sensetive data.
+2. GitIgnore file - checked for the env.py to not be pushed to Github.
+3. Repository pushed to Github.
+4. **Heroku *"config vars"* updated with needed values... see picture! but *note* that the "DISABLE_COLLECTSTATIC = 1", is `only` nedded IF removing the "whitenoise" middleware and going for cloudinary instead.... since This APP (at the moment) is not allowing uploads of media, then whitenoise can be used, (and mentioned *"config vars"* could be removed).**
+5. Build Packs checked in Heroku
+   1. python
+6. Link Heroku APP with Github repository
+7. Deploy In Heroku (A manually deploy to main was used)
+
+## Links
+Heroku:
+The __live__ link can be found here - https://fastfood.herokuapp.com/
+
+Github:
+Link for Code - https://github.com/SvenLoevgren/fullstack-portfolio4.
+
+# Credits
+
+Code Institute education in general coding with tutor assistance- including advice of where to find free content on the web to style the APP, plus many tools to use to validate the code.
+Extra credit to my mentor given by Code Institute, for making it possible to understand the logic of coding and troubleshooting this APP.
+
+## Content
+For full list - see the requirements.txt file in github.
+Django (project)
+Heroku (deployment)
+Email.JS (email 3rd party)
+Elephant SQL (db)
+whitenoise (webservice)
+Cloudinary (whitenoise used instead).
+
+
+## Media
+All images (including logo and favicon) are self made.
+Google fonts and bootrap 5.3, plus fontawsome (icons) are used for styling (see links in html head in the code).
+
+**Over all -  The whole project was built and released with the assistance of Code Institute and alot of google.**
+
