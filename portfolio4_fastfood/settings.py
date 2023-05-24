@@ -36,7 +36,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["fastfood.herokuapp.com", "localhost", '8000-svenloevgre-fullstackpo-fdsfjn6e7jc.ws-eu97.gitpod.io']
+ALLOWED_HOSTS = ["fastfood.herokuapp.com", "localhost"]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://github.com',
@@ -83,7 +83,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'fastfood.urls' #APP urls
+ROOT_URLCONF = 'fastfood.urls'  # APP urls
 
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
